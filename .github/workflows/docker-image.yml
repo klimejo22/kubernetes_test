@@ -35,11 +35,11 @@ jobs:
         docker push josefkliment/api:latest
         docker push ghcr.io/klimejo22/api:latest
 
-    - name: Build Frontend image
-      run: |
-        docker build -t josefkliment/frontend:latest -t ghcr.io/klimejo22/frontend:latest ./nginx
+    # - name: Build Frontend image
+    #   run: |
+    #     docker build -t josefkliment/frontend:latest -t ghcr.io/klimejo22/frontend:latest ./nginx
 
-    - name: Push Frontend image
-      run: |
-        docker push josefkliment/frontend:latest
-        docker push ghcr.io/klimejo22/frontend:latest
+    # - name: Push Frontend image
+    #   run: |
+    #     docker push josefkliment/frontend:latest
+    #     docker push ghcr.io/klimejo22/frontend:latest
