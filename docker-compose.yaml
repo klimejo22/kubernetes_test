@@ -1,0 +1,7 @@
+services:
+  api:
+    build: 
+      context: ./api
+    container_name: k8s_api
+    ports:
+      - "8000:8000"
