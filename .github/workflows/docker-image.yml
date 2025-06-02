@@ -28,12 +28,12 @@ jobs:
 
     - name: Build API image
       run: |
-        docker build -t josefkliment/api:latest -t ghcr.io/klimejo22/api:latest ./api
+        docker build -t josefkliment/k8s-api:latest -t ghcr.io/klimejo22/k8s-api:latest ./api
 
     - name: Push API image
       run: |
-        docker push josefkliment/api:latest
-        docker push ghcr.io/klimejo22/api:latest
+        docker push josefkliment/k8s-api:latest
+        docker push ghcr.io/klimejo22/k8s-api:latest
 
     # - name: Build Frontend image
     #   run: |
