@@ -11,7 +11,7 @@ async def count_requests(
 ):
     response = await call_next(request) 
     if response.status_code < 500:
-        await redis_client.incr("totalRequests")
+        redis_client.incr("totalRequests")
 
     return response
     
