@@ -9,8 +9,10 @@ async def count_requests(
     request: Request,
     call_next
 ):
-    redis_client.incr("totalRequests")
-    response = await call_next(request)
+    response = await call_next(request) 
+    if response.status_code < 500:
+        await redis_client.incr("totalRequests")
+
     return response
     
 @app.get("/helloWorld")
