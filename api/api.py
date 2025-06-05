@@ -22,3 +22,10 @@ def helloWorld():
 @app.get("/stats")
 def stats():
     return {"Total requests": redis_client.get("totalRequests")}
+
+@app.get("/testNaHPA")
+def test():
+    a = 1
+    while True:
+        a = a * a + a
+        print(a)
