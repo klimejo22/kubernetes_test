@@ -25,7 +25,7 @@ def stats():
 
 @app.get("/testNaHPA")
 def test():
-    a = 1
     while True:
-        a = a * a + a
-        print(a)
+        x = 0
+        for i in range(10**6):
+            x += i ** 2
